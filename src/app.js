@@ -10,23 +10,35 @@ window.onload = function() {
   //Funcion Generador de Iconos Para la parte de Arriba
   let CardIcons = ["♦", "♥", "♠", "♣"];
 
-  function getRandomCard() {
-    return Math.floor(Math.random() * CardIcons.length);
-  }
+  document.getElementById("boton").addEventListener("click", function() {
+    function getRandomCard() {
+      return Math.floor(Math.random() * CardIcons.length);
+    }
 
-  function randomCard() {
-    let randomIndex = getRandomCard();
-    let randomCardIcon = CardIcons[randomIndex];
-    document.querySelector("#randomIcon1").innerHTML = randomCardIcon;
-    document.querySelector("#randomIcon2").innerHTML = randomCardIcon;
-  }
+    function randomCard() {
+      let randomIndex = getRandomCard();
+      let randomCardIcon = CardIcons[randomIndex];
+      let isEven = randomIndex % 2 === 0;
 
-  randomCard();
-  //Ahora vamos a crear una funcion que me de de manera random el numero de enmedio!
-  function getRandomNumber() {
-    return Math.ceil(Math.random() * 12);
-  }
-  let number = document.getElementById("number");
-  number.innerHTML = getRandomNumber();
-  //Ahora tenemos que cambiar de manera random los colores de los iconos de carta
+      document.querySelector("#randomIcon1").innerHTML = randomCardIcon;
+      document.querySelector("#randomIcon2").innerHTML = randomCardIcon;
+
+      if (isEven) {
+        document.querySelector("#randomIcon1").style.color = "red";
+        document.querySelector("#randomIcon2").style.color = "red";
+      } else {
+        document.querySelector("#randomIcon1").style.color = "black";
+        document.querySelector("#randomIcon2").style.color = "black";
+      }
+    }
+
+    randomCard();
+    //Ahora vamos a crear una funcion que me de de manera random el numero de enmedio!
+    function getRandomNumber() {
+      return Math.ceil(Math.random() * 12);
+    }
+    let number = document.getElementById("number");
+    number.innerHTML = getRandomNumber();
+    //Ahora tenemos que cambiar de manera random los colores de los iconos de carta
+  });
 };

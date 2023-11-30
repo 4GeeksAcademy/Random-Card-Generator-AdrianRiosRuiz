@@ -1,11 +1,11 @@
-.bgGreen {
+body {
   font-size: 100px;
-  background-color: green;
+  background: linear-gradient(#018531, #d6fb04);
 }
 .carta {
   width: 400px;
   height: 500px;
-  margin-top: 100px;
+  margin-top: 30px;
   margin-left: 35%;
   border-radius: 5%;
 }
@@ -16,4 +16,9 @@
 .bottomCard {
   display: flex;
   justify-content: flex-end;
+}
+
+#boton:hover {
+  transform: scale(2);
+  background: linear-gradient(rgb(1, 3, 142), rgb(0, 149, 255));
 }
