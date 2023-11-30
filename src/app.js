@@ -28,9 +28,11 @@ window.onload = function() {
       if (isEven) {
         document.querySelector("#randomIcon1").style.color = "red";
         document.querySelector("#randomIcon2").style.color = "red";
+        document.querySelector("#number").style.color = "red";
       } else {
         document.querySelector("#randomIcon1").style.color = "black";
         document.querySelector("#randomIcon2").style.color = "black";
+        document.querySelector("#number").style.color = "black";
       }
     }
 
