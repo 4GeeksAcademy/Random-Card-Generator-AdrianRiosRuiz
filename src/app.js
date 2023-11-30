@@ -9,8 +9,8 @@ window.onload = function() {
   //write your code here
   //Funcion Generador de Iconos Para la parte de Arriba
   let CardIcons = ["♦", "♥", "♠", "♣"];
-
-  document.getElementById("boton").addEventListener("click", function() {
+  //Con este evento lo que hare sera llamar a toda la funcion cuando el boton sea clickado
+  document.querySelector("#boton").addEventListener("click", function() {
     function getRandomCard() {
       return Math.floor(Math.random() * CardIcons.length);
     }
@@ -35,7 +35,7 @@ window.onload = function() {
     randomCard();
     //Ahora vamos a crear una funcion que me de de manera random el numero de enmedio!
     function getRandomNumber() {
-      return Math.ceil(Math.random() * 12);
+      return Math.floor(Math.random() * 12);
     }
     let number = document.getElementById("number");
     number.innerHTML = getRandomNumber();
