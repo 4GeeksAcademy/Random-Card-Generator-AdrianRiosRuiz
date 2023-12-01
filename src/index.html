@@ -25,12 +25,24 @@
   </head>
 
   <body>
-    <div class="d-flex justify-content-center p-5">
+    <div class="d-flex justify-content-center">
+      <select
+        id="sizeSelector"
+        class="form-select col-4 w-25 m-3"
+        aria-label="Default select example"
+      >
+        <option selected disabled>Elige un tamaño de tu carta ideal!</option>
+        <option value="small">Pequeño</option>
+        <option value="medium">Mediano</option>
+        <option value="large">Grande</option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-center p-2">
       <button id="boton" class="btn btn-primary w-25 ">
         Click here to change the card
       </button>
     </div>
-    <div class="carta bg-white ">
+    <div class="carta  bg-white " id="laCarta">
       <div id="randomIcon1" class="topCard col-12 float-start ps-4">♣</div>
       <div id="number" class="body d-flex justify-content-center col-12">9</div>
       <div id="randomIcon2" class="bottomCard col-12 pe-4">♣</div>

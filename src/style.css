@@ -1,8 +1,8 @@
 body {
-  font-size: 100px;
   background: linear-gradient(#018531, #d6fb04);
 }
 .carta {
+  font-size: 100px;
   width: 350px;
   height: 450px;
   margin-top: 10px;
@@ -41,5 +41,5 @@ body {
 }
 
 h1 {
-  animation: changeColor 10s infinite;
+  animation: changeColor 3s infinite;
 }

@@ -62,3 +62,39 @@ window.onload = function() {
     number.innerHTML = getRandomNumeroYletra();
   });
 };
+
+//Ahora voy a crear inputs para que puedas elegir el tamaño de la carta si lo quieres grnde ,pequeño o mediano.
+
+function chooseSize() {
+  let sizeSelector = document.querySelector("#sizeSelector");
+  let laCarta = document.querySelector("#laCarta");
+
+  sizeSelector.addEventListener("change", function() {
+    let sizeOption = sizeSelector.value;
+
+    switch (sizeOption) {
+      case "small":
+        laCarta.style.width = "160px";
+        laCarta.style.height = "230px";
+        laCarta.style.fontSize = "50px";
+        break;
+      case "medium":
+        laCarta.style.width = "350px";
+        laCarta.style.height = "450px";
+        laCarta.style.fontSize = "100px";
+        break;
+      case "large":
+        laCarta.style.width = "530px";
+        laCarta.style.height = "600px";
+        laCarta.style.fontSize = "135px";
+        break;
+      default:
+        laCarta.style.width = "350px";
+        laCarta.style.height = "450px";
+        laCarta.style.fontSize = "100px";
+        break;
+    }
+  });
+}
+
+chooseSize();
