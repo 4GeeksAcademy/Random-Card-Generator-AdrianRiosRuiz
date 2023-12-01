@@ -14,6 +14,7 @@ body {
   justify-content: flex-start;
 }
 .bottomCard {
+  transform: scaleY(-1);
   display: flex;
   justify-content: flex-end;
 }
