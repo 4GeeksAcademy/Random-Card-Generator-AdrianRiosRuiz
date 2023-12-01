@@ -8,7 +8,7 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   //Funcion Generador de Iconos Para la parte de Arriba
-  let CardIcons = ["♦", "♥", "♠", "♣", "♦", "♥", "♠", "♣"];
+  let CardIcons = ["♦", "♠", "♥", "♣"];
   //Con este evento lo que hare sera llamar a toda la funcion cuando el boton sea clickado
   document.querySelector("#boton").addEventListener("click", function() {
     function getRandomCard() {
