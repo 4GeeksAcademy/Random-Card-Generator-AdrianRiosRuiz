@@ -18,12 +18,12 @@ window.onload = function() {
     function randomCard() {
       let randomIndex = getRandomCard();
       let randomCardIcon = CardIcons[randomIndex];
-      let isEven = randomIndex % 2 === 0;
 
       document.querySelector("#randomIcon1").innerHTML = randomCardIcon;
       document.querySelector("#randomIcon2").innerHTML = randomCardIcon;
 
-      if (isEven) {
+      // Solo cambia el color si el ícono es "♥" o "♦"
+      if (randomCardIcon === "♥" || randomCardIcon === "♦") {
         document.querySelector("#randomIcon1").style.color = "red";
         document.querySelector("#randomIcon2").style.color = "red";
         document.querySelector("#number").style.color = "red";
